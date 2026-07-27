@@ -7,11 +7,11 @@ WORKDIR /source
 COPY swgoh-ae-api.sln ./swgoh-ae-api.sln
 COPY AssetGetterTools/*.csproj ./AssetGetterTools/
 COPY AssetWebApi/*.csproj ./AssetWebApi/
-COPY AssetStudio/AssetStudio/*.csproj ./AssetStudio/AssetStudio/
-COPY AssetStudio/AssetStudioFBXWrapper/*.csproj ./AssetStudio/AssetStudioFBXWrapper/
-COPY AssetStudio/AssetStudioUtility/*.csproj ./AssetStudio/AssetStudioUtility/
-COPY AssetStudio/AssetStudio.PInvoke/*.csproj ./AssetStudio/AssetStudio.PInvoke/
-COPY AssetStudio/Texture2DDecoderWrapper/*.csproj ./AssetStudio/Texture2DDecoderWrapper/
+# COPY AssetStudio/AssetStudio/*.csproj ./AssetStudio/AssetStudio/
+# COPY AssetStudio/AssetStudioFBXWrapper/*.csproj ./AssetStudio/AssetStudioFBXWrapper/
+# COPY AssetStudio/AssetStudioUtility/*.csproj ./AssetStudio/AssetStudioUtility/
+# COPY AssetStudio/AssetStudio.PInvoke/*.csproj ./AssetStudio/AssetStudio.PInvoke/
+# COPY AssetStudio/Texture2DDecoderWrapper/*.csproj ./AssetStudio/Texture2DDecoderWrapper/
 RUN dotnet restore
 
 # copy everything else and build app
