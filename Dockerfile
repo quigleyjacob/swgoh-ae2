@@ -4,6 +4,7 @@ FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /source
 
 # copy csproj and restore as distinct layers
+RUN git submodule update --init --recursive
 COPY swgoh-ae-api.sln ./swgoh-ae-api.sln
 COPY AssetGetterTools/*.csproj ./AssetGetterTools/
 COPY AssetWebApi/*.csproj ./AssetWebApi/
